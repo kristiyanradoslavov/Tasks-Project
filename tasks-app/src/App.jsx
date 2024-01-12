@@ -1,10 +1,13 @@
+import MainPanel from "./components/main-panel/MainPanel"
+import NavPanel from "./components/nav-panel/NavPanel"
+
 function App() {
 
   return (
     <>
-      <h1>
-        First test !
-      </h1>
+      <NavPanel />
+
+      <MainPanel />
     </>
   )
 }

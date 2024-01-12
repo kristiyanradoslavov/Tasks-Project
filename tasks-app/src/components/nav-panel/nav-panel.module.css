@@ -1,5 +1,33 @@
+:root {
+    --main-text-color: #E3E2E7;
+}
+
+
 .nav-panel {
     width: 294px;
-    padding: 28px;
+    padding: 19px 28px;
+    /* display: flex; */
+    outline: 2px #d9d9d9 solid;
+    box-sizing: border-box;
+}
+
+
+.personal-menu-dropdown {
+    background-color: transparent;
+    color: var(--main-text-color);
+    font-size: 22px;
+    border: none;
     display: flex;
+    gap: 10px;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.personal-menu-dropdown:hover {
+    cursor: pointer;
+}
+
+.personal-arrow {
+    font-size: 12px;
+    padding-top: 4px;
 }

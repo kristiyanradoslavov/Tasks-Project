@@ -1,14 +1,13 @@
 :root {
     --main-text-color: #E3E2E7;
+    --border-color: #E3E2E7;
 }
-
 
 .nav-panel {
     width: 294px;
-    padding: 19px 28px;
+    /* margin: 19px 28px; */
     /* display: flex; */
-    outline: 2px #d9d9d9 solid;
-    box-sizing: border-box;
+    outline: 2px var(--border-color) solid;
 }
 
 
@@ -19,8 +18,8 @@
     border: none;
     display: flex;
     gap: 10px;
-    /* justify-content: center;
-    align-items: center; */
+    padding: 0px;
+    padding-bottom: 16px;
 }
 
 .personal-menu-dropdown:hover {
@@ -31,3 +30,40 @@
     font-size: 12px;
     padding-top: 4px;
 }
+
+.personal-menu {
+    border-bottom: 1px solid var(--border-color);
+    padding-top: 19px;
+    padding-left: 24px;
+    /* padding: 19px 28px; */
+}
+
+.main-btns {
+    padding-left: 24px;
+    margin: 0px;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+    color: var(--main-text-color);
+}
+
+.svg-wrapper {
+    width: 22px;
+}
+
+.svg-wrapper svg {
+    display: block;
+    margin: auto;
+}
+
+

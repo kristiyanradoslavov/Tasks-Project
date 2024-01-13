@@ -66,4 +66,15 @@
     margin: auto;
 }
 
+.resources {
+    margin-top: 48px;
+}
 
+.resources h2 {
+    padding: 0px;
+    padding-left: 24px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #9E9EA3;
+}

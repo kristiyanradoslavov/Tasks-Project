@@ -66,11 +66,13 @@
     margin: auto;
 }
 
-.resources {
+.resources,
+.spaces {
     margin-top: 48px;
 }
 
-.resources h2 {
+.resources h2,
+.spaces h2 {
     padding: 0px;
     padding-left: 24px;
     font-weight: 700;

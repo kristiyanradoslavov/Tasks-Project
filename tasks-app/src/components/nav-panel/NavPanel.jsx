@@ -42,6 +42,7 @@ export default function NavPanel() {
                 </li>
             </ul>
 
+            {/* Resources section */}
             <div className={style['resources']}>
                 <h2>Resources</h2>
 
@@ -107,6 +108,88 @@ export default function NavPanel() {
                                 </svg>
                             </div>
                             <span>Files</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            {/* Spaces section */}
+
+            <div className={style['spaces']}>
+                <h2>Spaces</h2>
+
+                <ul role='list' className={style['main-btns']}>
+                    <li>
+                        <button className={style['main-wrapper']}>
+                            <div className={style['svg-wrapper']}>
+                                <svg
+                                    width={22}
+                                    height={22}
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect width={22} height={22} rx={4} fill="#0E9888" />
+                                </svg>
+
+                            </div>
+                            <span>Marketing</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button className={style['main-wrapper']}>
+                            <div className={style['svg-wrapper']}>
+                                <svg
+                                    width={22}
+                                    height={22}
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect width={22} height={22} rx={4} fill="#D93D42" />
+                                </svg>
+
+
+                            </div>
+                            <span>Product</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button className={style['main-wrapper']}>
+                            <div className={style['svg-wrapper']}>
+                                <svg
+                                    width={22}
+                                    height={22}
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect width={22} height={22} rx={4} fill="#FFC53D" />
+                                </svg>
+
+                            </div>
+                            <span>Engineering</span>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button className={style['main-wrapper']}>
+                            <div className={style['svg-wrapper']}>
+                                <svg
+                                    width={22}
+                                    height={22}
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect width={22} height={22} rx={4} fill="#8445BC" />
+                                </svg>
+
+
+                            </div>
+                            <span>Finance</span>
                         </button>
                     </li>
                 </ul>

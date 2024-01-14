@@ -6,8 +6,25 @@ export default function NavPanel() {
         <section className={style['nav-panel']}>
             <div className={style['personal-menu']}>
                 <button className={style['personal-menu-dropdown']}>
-                    <span>Bozhidar Kostov</span>
+                    <span className={style['first-letter']}>B</span>
+                    <span className={style['first-name']}>Bozhidar Kostov</span>
                     <i className={`fa-solid fa-caret-down ${style['personal-arrow']}`}></i>
+
+                </button>
+
+                <button className={style['hide-btn']}>
+                    <svg
+                        width={20}
+                        height={14}
+                        viewBox="0 0 20 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M7.25917 8.83331H0.833334V10.6666H7.25917V13.4166L10.9167 9.74998L7.25917 6.08331V8.83331ZM12.7408 7.91665V5.16665H19.1667V3.33331H12.7408V0.583313L9.08333 4.24998L12.7408 7.91665Z"
+                            fill="#E3E2E7"
+                        />
+                    </svg>
                 </button>
             </div>
 

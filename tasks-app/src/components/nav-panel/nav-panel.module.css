@@ -1,10 +1,10 @@
 :root {
     --main-text-color: #E3E2E7;
-    --border-color: #E3E2E7;
+    --border-color: #232325;    
 }
 
 .nav-panel {
-    width: 294px;
+    width: 398px;
     /* margin: 19px 28px; */
     /* display: flex; */
     outline: 2px var(--border-color) solid;
@@ -20,6 +20,7 @@
     gap: 10px;
     padding: 0px;
     padding-bottom: 16px;
+    align-items: center;
 }
 
 .personal-menu-dropdown:hover {
@@ -28,14 +29,42 @@
 
 .personal-arrow {
     font-size: 12px;
-    padding-top: 4px;
+    /* padding-top: 4px; */
 }
 
 .personal-menu {
     border-bottom: 1px solid var(--border-color);
     padding-top: 19px;
     padding-left: 24px;
-    /* padding: 19px 28px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-letter {
+    width: 22px;
+    height: 22px;
+    font-size: 18px;
+    background-color: #0E9888;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.first-name {
+    height: 27px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.hide-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    padding-right: 20px;
+    padding-bottom: 16px;
 }
 
 .main-btns {

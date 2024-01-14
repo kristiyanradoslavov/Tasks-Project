@@ -60,8 +60,6 @@ export default function Header() {
             <div className={styles['mode-btn']}>
                 <div className={styles['btn-wrapper']}>
                     <p>Light mode</p>
-                    {/* <button></button> */}
-
                     <input type="checkbox" className={styles['theme-checkbox']}/>
                 </div>
             </div>

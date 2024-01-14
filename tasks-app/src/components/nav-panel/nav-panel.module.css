@@ -5,6 +5,18 @@
 
 .nav-panel {
     width: 398px;
+
+}
+
+.closed-nav {
+    width: 66px;
+    transition: width 0.5s;
+}
+
+.closed-nav .hide-btn {
+    position: absolute;
+    left: 80px;
+    top: 70px;
 }
 
 .personal-menu-dropdown {
@@ -115,4 +127,8 @@
 .resources,
 .spaces {
     padding: 20px 0px;
+}
+
+.closed {
+    display: none;
 }

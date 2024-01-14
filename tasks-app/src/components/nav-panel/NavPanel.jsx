@@ -1,18 +1,40 @@
+import { useState } from 'react';
 import style from './nav-panel.module.css'
 
 export default function NavPanel() {
 
+    const [sideSectionState, setSideSectionState] = useState('');
+    const [navPanelClass, setNavPanelClass] = useState('nav-panel')
+
+    const sideSectionBtnHandler = () => {
+        if (sideSectionState) {
+            openSideSection()
+        } else {
+            closeSideSection()
+        }
+    }
+
+    const closeSideSection = () => {
+        setSideSectionState('closed')
+        setNavPanelClass('closed-nav')
+    }
+
+    const openSideSection = () => {
+        setSideSectionState('')
+        setNavPanelClass('nav-panel')
+    }
+
     return (
-        <section className={style['nav-panel']}>
+        <section className={style[navPanelClass]}>
             <div className={style['personal-menu']}>
                 <button className={style['personal-menu-dropdown']}>
                     <span className={style['first-letter']}>B</span>
-                    <span className={style['first-name']}>Bozhidar Kostov</span>
-                    <i className={`fa-solid fa-caret-down ${style['personal-arrow']}`}></i>
+                    <span className={`${style['first-name']} ${style[sideSectionState]}`}>Bozhidar Kostov</span>
+                    <i className={`fa-solid fa-caret-down ${style['personal-arrow']} ${style[sideSectionState]}`}></i>
 
                 </button>
 
-                <button className={style['hide-btn']}>
+                <button className={style['hide-btn']} onClick={sideSectionBtnHandler}>
                     <svg
                         width={20}
                         height={14}
@@ -35,7 +57,7 @@ export default function NavPanel() {
                             <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 0.924652L0.916656 10H3.66666V18.25H9.16666V12.75H12.8333V18.25H18.3333V10H21.0833L11 0.924652Z" fill="#E3E2E7" />
                             </svg>
-                            <span>Home</span>
+                            <span className={style[sideSectionState]}>Home</span>
                         </button>
                     </li>
                     <li>
@@ -45,7 +67,7 @@ export default function NavPanel() {
                                     <path d="M15.4167 0.75H2.57417C1.55667 0.75 0.759167 1.56583 0.759167 2.58333L0.75 15.4167C0.75 16.425 1.55667 17.25 2.57417 17.25H15.4167C16.425 17.25 17.25 16.425 17.25 15.4167V2.58333C17.25 1.56583 16.425 0.75 15.4167 0.75ZM15.4167 11.75H11.75C11.75 13.2717 10.5125 14.5 9 14.5C7.4875 14.5 6.25 13.2717 6.25 11.75H2.57417V2.58333H15.4167V11.75Z" fill="#E3E2E7" />
                                 </svg>
                             </div>
-                            <span>Inbox</span>
+                            <span className={style[sideSectionState]}>Inbox</span>
                         </button>
                     </li>
                     <li>
@@ -65,7 +87,7 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span>Docs</span>
+                            <span className={style[sideSectionState]}>Docs</span>
                         </button>
                     </li>
 
@@ -85,7 +107,7 @@ export default function NavPanel() {
                                     />
                                 </svg>
                             </div>
-                            <span>Goals</span>
+                            <span className={style[sideSectionState]}>Goals</span>
                         </button>
                     </li>
                 </ul>
@@ -93,7 +115,7 @@ export default function NavPanel() {
 
             {/* Resources section */}
             <div className={style['resources']}>
-                <h2 className={style['section-heading']}>Resources</h2>
+                <h2 className={`${style['section-heading']} ${style[sideSectionState]}`}>Resources</h2>
 
                 <ul role='list' className={style['main-btns']}>
                     <li>
@@ -115,7 +137,7 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span>Team View</span>
+                            <span className={style[sideSectionState]}>Team View</span>
                         </button>
                     </li>
 
@@ -136,7 +158,7 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span>History</span>
+                            <span className={style[sideSectionState]}>History</span>
                         </button>
                     </li>
 
@@ -156,7 +178,7 @@ export default function NavPanel() {
                                     />
                                 </svg>
                             </div>
-                            <span>Files</span>
+                            <span className={style[sideSectionState]}>Files</span>
                         </button>
                     </li>
                 </ul>
@@ -165,7 +187,7 @@ export default function NavPanel() {
             {/* Spaces section */}
 
             <div className={style['spaces']}>
-                <h2 className={style['section-heading']}>Spaces</h2>
+                <h2 className={`${style['section-heading']} ${style[sideSectionState]}`}>Spaces</h2>
 
                 <ul role='list' className={style['main-btns']}>
                     <li>
@@ -182,7 +204,7 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span>Marketing</span>
+                            <span className={style[sideSectionState]}>Marketing</span>
                         </button>
                     </li>
 
@@ -201,7 +223,7 @@ export default function NavPanel() {
 
 
                             </div>
-                            <span>Product</span>
+                            <span className={style[sideSectionState]}>Product</span>
                         </button>
                     </li>
 
@@ -219,7 +241,7 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span>Engineering</span>
+                            <span className={style[sideSectionState]}>Engineering</span>
                         </button>
                     </li>
 
@@ -238,7 +260,7 @@ export default function NavPanel() {
 
 
                             </div>
-                            <span>Finance</span>
+                            <span className={style[sideSectionState]}>Finance</span>
                         </button>
                     </li>
                 </ul>

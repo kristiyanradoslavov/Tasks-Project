@@ -1,7 +1,7 @@
 export default function MainPanel() {
     return (
         <section className="main-panel">
-            Test 2
+            This is the main section
         </section>
     );
 }

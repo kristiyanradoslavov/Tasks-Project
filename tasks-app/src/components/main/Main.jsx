@@ -9,6 +9,7 @@ export default function Main() {
             <NavPanel />
 
             <MainPanel />
+            
         </main>
 
     );

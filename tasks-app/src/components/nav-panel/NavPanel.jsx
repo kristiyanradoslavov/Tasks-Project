@@ -93,7 +93,7 @@ export default function NavPanel() {
 
             {/* Resources section */}
             <div className={style['resources']}>
-                <h2>Resources</h2>
+                <h2 className={style['section-heading']}>Resources</h2>
 
                 <ul role='list' className={style['main-btns']}>
                     <li>
@@ -165,7 +165,7 @@ export default function NavPanel() {
             {/* Spaces section */}
 
             <div className={style['spaces']}>
-                <h2>Spaces</h2>
+                <h2 className={style['section-heading']}>Spaces</h2>
 
                 <ul role='list' className={style['main-btns']}>
                     <li>

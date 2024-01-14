@@ -1,0 +1,103 @@
+:root {
+    --main-text-color: #E3E2E7;
+    --border-color: #232325;
+    --background-color: #0C0C0C;
+}
+
+
+.header-section {
+    background-color: #232325;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 20px;
+    height: 45px;
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.mode-btn {
+    padding-right: 20px;
+}
+
+.search-input {
+    /* Vector */
+    width: 620px;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2083 10.8333H11.4842L11.2275 10.5858C12.1258 9.54083 12.6667 8.18417 12.6667 6.70833C12.6667 3.4175 9.99917 0.75 6.70833 0.75C3.4175 0.75 0.75 3.4175 0.75 6.70833C0.75 9.99917 3.4175 12.6667 6.70833 12.6667C8.18417 12.6667 9.54083 12.1258 10.5858 11.2275L10.8333 11.4842V12.2083L15.4167 16.7825L16.7825 15.4167L12.2083 10.8333ZM6.70833 10.8333C4.42583 10.8333 2.58333 8.99083 2.58333 6.70833C2.58333 4.42583 4.42583 2.58333 6.70833 2.58333C8.99083 2.58333 10.8333 4.42583 10.8333 6.70833C10.8333 8.99083 8.99083 10.8333 6.70833 10.8333Z' fill='%23E3E2E7'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-color: #232325;
+    background-size: 16px 16px;
+    background-position: 270px;
+    padding-left: 30px;
+    color: var(--main-text-color);
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 6px;
+}
+
+.imgRemoved {
+    background-position: 5px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+  :-moz-placeholder {
+    text-align: center;
+  }
+
+/* BTN CSS */
+.theme-checkbox {
+    --toggle-size: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 6.25em;
+    height: 3.125em;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 99em;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+    content: "";
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    top: 0.438em;
+    left: 0.438em;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 100%;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+    left: calc(100% - 2.25em - 0.438em);
+    background-position: 0;
+}
+
+.theme-checkbox:checked {
+    background-position: 100%;
+}

@@ -1,11 +1,9 @@
 :root {
-    --main-text-color: #E3E2E7;
     --border-color: #232325;
 }
 
 .nav-panel {
     width: 398px;
-
 }
 
 .closed-nav {
@@ -15,13 +13,12 @@
 
 .closed-nav .hide-btn {
     position: absolute;
-    left: 80px;
-    top: 70px;
+    left: 90px;
+    top: 80px;
 }
 
 .personal-menu-dropdown {
     background-color: transparent;
-    color: var(--main-text-color);
     font-size: 22px;
     border: none;
     display: flex;
@@ -47,6 +44,7 @@
     padding-left: 24px;
     display: flex;
     justify-content: space-between;
+    height: 64px;
 }
 
 .first-letter {
@@ -91,7 +89,6 @@
     padding: 0px;
     background-color: transparent;
     border: none;
-    color: var(--main-text-color);
 }
 
 .svg-wrapper {

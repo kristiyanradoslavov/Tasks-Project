@@ -2,18 +2,30 @@ import { useState } from 'react';
 import styles from './header.module.css'
 
 
-export default function Header() {
+export default function Header({
+    websiteMode,
+    lightModeSetter,
+    darkModeSetter
+}) {
 
     const [imgState, setImgState] = useState('');
+
+    const changeModeHandler = () => {
+        if (websiteMode === 'light-mode') {
+            darkModeSetter()
+        } else if (websiteMode === 'dark-mode') {
+            lightModeSetter()
+        }
+    }
 
     const searchImgRemover = () => {
         setImgState('imgRemoved')
     }
-    
+
     const searchImgSetter = () => {
         setImgState('')
     }
-    
+
     return (
         <header className={styles['header-section']}>
             <h2 className={styles['logo']}>
@@ -49,10 +61,10 @@ export default function Header() {
             </h2>
 
             <div className={styles['search']}>
-                <input type="text" placeholder='Search' 
-                className={`${styles['search-input']} ${styles[imgState]}`}
-                onFocus={searchImgRemover}
-                onBlur={searchImgSetter}
+                <input type="text" placeholder='Search'
+                    className={`${styles['search-input']} ${styles[imgState]}`}
+                    onFocus={searchImgRemover}
+                    onBlur={searchImgSetter}
                 />
 
             </div>
@@ -60,7 +72,7 @@ export default function Header() {
             <div className={styles['mode-btn']}>
                 <div className={styles['btn-wrapper']}>
                     <p>Light mode</p>
-                    <input type="checkbox" className={styles['theme-checkbox']}/>
+                    <input type="checkbox" className={styles['theme-checkbox']} onClick={changeModeHandler} />
                 </div>
             </div>
         </header>

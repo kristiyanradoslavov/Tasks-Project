@@ -1,0 +1,26 @@
+:root {
+    --border-color: #232325;
+}
+
+.main-panel {
+    width: 100%;
+}
+.nav-panel {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    padding-left: 75px;
+    border-bottom: 1px solid var(--border-color);
+    height: 64px;
+    width: 100%;
+    margin: 0px;
+}
+
+.nav-panel li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 38px;
+    font-size: 18px;
+    line-height: 21px;
+}

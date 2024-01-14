@@ -28,13 +28,12 @@ body {
     color: var(--light-font-color);
 }
 
-.light-mode svg path{
-    color:red;
-}
-
 .dark-mode button {
     color: var(--dark-font-color);
+}
 
+.light-mode path {
+    fill: var(--light-font-color);
 }
 
 button {

@@ -36,6 +36,7 @@ export default function NavPanel() {
 
                 <button className={style['hide-btn']} onClick={sideSectionBtnHandler}>
                     <svg
+                        className='test'
                         width={20}
                         height={14}
                         viewBox="0 0 20 14"

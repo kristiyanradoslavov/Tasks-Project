@@ -1,6 +1,6 @@
 :root {
     --main-text-color: #E3E2E7;
-    --border-color: #232325;    
+    --border-color: #232325;
 }
 
 .nav-panel {
@@ -95,11 +95,6 @@
     margin: auto;
 }
 
-.resources,
-.spaces {
-    margin-top: 48px;
-}
-
 .resources h2,
 .spaces h2 {
     padding: 0px;
@@ -108,4 +103,15 @@
     font-size: 22px;
     line-height: 26px;
     color: #9E9EA3;
+}
+
+.main-section,
+.resources {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-section,
+.resources,
+.spaces {
+    padding: 20px 0px;
 }

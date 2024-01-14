@@ -1,13 +1,14 @@
-import MainPanel from "./components/main-panel/MainPanel"
-import NavPanel from "./components/nav-panel/NavPanel"
+import Header from "./components/header/Header"
+import Main from "./components/main/Main"
 
 function App() {
 
   return (
     <>
-      <NavPanel />
+      <Header />
 
-      <MainPanel />
+      <Main />
+
     </>
   )
 }

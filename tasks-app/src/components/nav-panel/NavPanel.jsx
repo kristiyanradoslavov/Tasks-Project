@@ -23,26 +23,25 @@ export default function NavPanel() {
 
     const activeSetterHandler = (e) => {
         const currentBtn = e.currentTarget.name;
-        console.log(currentBtn)
-        setActiveBtn(currentBtn)
+        setActiveBtn(currentBtn);
     }
 
     const sideSectionBtnHandler = () => {
         if (sideSectionState) {
-            openSideSection()
+            openSideSection();
         } else {
-            closeSideSection()
+            closeSideSection();
         }
     }
 
     const closeSideSection = () => {
-        setSideSectionState('closed')
-        setNavPanelClass('closed-nav')
+        setSideSectionState('closed');
+        setNavPanelClass('closed-nav');
     }
 
     const openSideSection = () => {
-        setSideSectionState('')
-        setNavPanelClass('nav-panel')
+        setSideSectionState('');
+        setNavPanelClass('nav-panel');
     }
 
     return (

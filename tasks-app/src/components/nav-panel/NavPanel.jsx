@@ -1,10 +1,30 @@
 import { useState } from 'react';
 import style from './nav-panel.module.css'
 
+BTN_NAMES = {
+    home: 'Home',
+    inbox: 'Inbox',
+    docs: 'Docs',
+    goals: 'Goals',
+    teamView: 'Team View',
+    history: 'History',
+    files: 'Files',
+    marketing: 'Marketing',
+    product: 'Product',
+    engineering: 'Engineering',
+    finance: 'Finance',
+}
+
 export default function NavPanel() {
 
     const [sideSectionState, setSideSectionState] = useState('');
-    const [navPanelClass, setNavPanelClass] = useState('nav-panel')
+    const [navPanelClass, setNavPanelClass] = useState('nav-panel');
+    const [activeBtn, setActiveBtn] = useState('');
+
+    const activeSetterHandler = (e) => {
+        const currentBtn = e.currentTarget.name;
+        setActiveBtn(currentBtn)
+    }
 
     const sideSectionBtnHandler = () => {
         if (sideSectionState) {
@@ -53,16 +73,30 @@ export default function NavPanel() {
 
             <div className={style['main-section']}>
                 <ul role='list' className={style['main-btns']}>
-                    <li>
-                        <button className={style['main-wrapper']}>
+                    <li className={style['nav-btn']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name='Home'
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === 'Home' ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 0.924652L0.916656 10H3.66666V18.25H9.16666V12.75H12.8333V18.25H18.3333V10H21.0833L11 0.924652Z" fill="#E3E2E7" />
                             </svg>
                             <span className={style[sideSectionState]}>Home</span>
                         </button>
                     </li>
-                    <li>
-                        <button className={style['main-wrapper']}>
+                    <li className={style['nav-btn']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name='Inbox'
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === 'Inbox' ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M15.4167 0.75H2.57417C1.55667 0.75 0.759167 1.56583 0.759167 2.58333L0.75 15.4167C0.75 16.425 1.55667 17.25 2.57417 17.25H15.4167C16.425 17.25 17.25 16.425 17.25 15.4167V2.58333C17.25 1.56583 16.425 0.75 15.4167 0.75ZM15.4167 11.75H11.75C11.75 13.2717 10.5125 14.5 9 14.5C7.4875 14.5 6.25 13.2717 6.25 11.75H2.57417V2.58333H15.4167V11.75Z" fill="#E3E2E7" />
@@ -71,7 +105,7 @@ export default function NavPanel() {
                             <span className={style[sideSectionState]}>Inbox</span>
                         </button>
                     </li>
-                    <li>
+                    <li className={style['nav-btn']}>
                         <button className={style['main-wrapper']}>
                             <div className={style['svg-wrapper']}>
                                 <svg
@@ -92,7 +126,7 @@ export default function NavPanel() {
                         </button>
                     </li>
 
-                    <li>
+                    <li className={style['nav-btn']}>
                         <button className={style['main-wrapper']}>
                             <div className={style['svg-wrapper']}>
                                 <svg
@@ -119,7 +153,7 @@ export default function NavPanel() {
                 <h2 className={`${style['section-heading']} ${style[sideSectionState]}`}>Resources</h2>
 
                 <ul role='list' className={style['main-btns']}>
-                    <li>
+                    <li className={style['nav-btn']}>
                         <button className={style['main-wrapper']}>
                             <div className={style['svg-wrapper']}>
                                 <svg
@@ -142,7 +176,7 @@ export default function NavPanel() {
                         </button>
                     </li>
 
-                    <li>
+                    <li className={style['nav-btn']}>
                         <button className={style['main-wrapper']}>
                             <div className={style['svg-wrapper']}>
                                 <svg
@@ -163,7 +197,7 @@ export default function NavPanel() {
                         </button>
                     </li>
 
-                    <li>
+                    <li className={style['nav-btn']}>
                         <button className={style['main-wrapper']}>
                             <div className={style['svg-wrapper']}>
                                 <svg
@@ -191,7 +225,7 @@ export default function NavPanel() {
                 <h2 className={`${style['section-heading']} ${style[sideSectionState]}`}>Spaces</h2>
 
                 <ul role='list' className={style['main-btns']}>
-                    <li>
+                    <li className={style['nav-btn']}>
                         <button className={style['main-wrapper']}>
                             <div className={style['svg-wrapper']}>
                                 <svg
@@ -209,7 +243,7 @@ export default function NavPanel() {
                         </button>
                     </li>
 
-                    <li>
+                    <li className={style['nav-btn']}>
                         <button className={style['main-wrapper']}>
                             <div className={style['svg-wrapper']}>
                                 <svg
@@ -228,7 +262,7 @@ export default function NavPanel() {
                         </button>
                     </li>
 
-                    <li>
+                    <li className={style['nav-btn']}>
                         <button className={style['main-wrapper']}>
                             <div className={style['svg-wrapper']}>
                                 <svg
@@ -246,7 +280,7 @@ export default function NavPanel() {
                         </button>
                     </li>
 
-                    <li>
+                    <li className={style['nav-btn']}>
                         <button className={style['main-wrapper']}>
                             <div className={style['svg-wrapper']}>
                                 <svg

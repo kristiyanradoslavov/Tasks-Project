@@ -1,4 +1,5 @@
-.main-section {
+.main {
     display: flex;
     height: 100vw;
+    width: 100%;
 }

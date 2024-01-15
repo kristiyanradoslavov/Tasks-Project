@@ -147,4 +147,5 @@
 
 .active-nav-btn {
     background-color: var(--active-nav-btn);
+    border-radius: 6px;
 }

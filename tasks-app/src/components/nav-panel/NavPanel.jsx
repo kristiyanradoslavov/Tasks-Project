@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import style from './nav-panel.module.css'
 
-BTN_NAMES = {
+const BTN_NAMES = {
     home: 'Home',
     inbox: 'Inbox',
     docs: 'Docs',
@@ -23,6 +23,7 @@ export default function NavPanel() {
 
     const activeSetterHandler = (e) => {
         const currentBtn = e.currentTarget.name;
+        console.log(currentBtn)
         setActiveBtn(currentBtn)
     }
 
@@ -76,25 +77,25 @@ export default function NavPanel() {
                     <li className={style['nav-btn']}>
                         <button
                             onClick={activeSetterHandler}
-                            name='Home'
+                            name={BTN_NAMES.home}
                             className={
                                 `${style['main-wrapper']} 
-                                ${style[activeBtn === 'Home' ? 'active-nav-btn' : ""]}`
+                                ${style[activeBtn === BTN_NAMES.home ? 'active-nav-btn' : ""]}`
                             }
                         >
                             <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 0.924652L0.916656 10H3.66666V18.25H9.16666V12.75H12.8333V18.25H18.3333V10H21.0833L11 0.924652Z" fill="#E3E2E7" />
                             </svg>
-                            <span className={style[sideSectionState]}>Home</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.home}</span>
                         </button>
                     </li>
                     <li className={style['nav-btn']}>
                         <button
                             onClick={activeSetterHandler}
-                            name='Inbox'
+                            name={BTN_NAMES.inbox}
                             className={
                                 `${style['main-wrapper']} 
-                                ${style[activeBtn === 'Inbox' ? 'active-nav-btn' : ""]}`
+                                ${style[activeBtn === BTN_NAMES.inbox ? 'active-nav-btn' : ""]}`
                             }
                         >
                             <div className={style['svg-wrapper']}>
@@ -102,11 +103,18 @@ export default function NavPanel() {
                                     <path d="M15.4167 0.75H2.57417C1.55667 0.75 0.759167 1.56583 0.759167 2.58333L0.75 15.4167C0.75 16.425 1.55667 17.25 2.57417 17.25H15.4167C16.425 17.25 17.25 16.425 17.25 15.4167V2.58333C17.25 1.56583 16.425 0.75 15.4167 0.75ZM15.4167 11.75H11.75C11.75 13.2717 10.5125 14.5 9 14.5C7.4875 14.5 6.25 13.2717 6.25 11.75H2.57417V2.58333H15.4167V11.75Z" fill="#E3E2E7" />
                                 </svg>
                             </div>
-                            <span className={style[sideSectionState]}>Inbox</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.inbox}</span>
                         </button>
                     </li>
                     <li className={style['nav-btn']}>
-                        <button className={style['main-wrapper']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name={BTN_NAMES.docs}
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === BTN_NAMES.docs ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg
                                     width={16}
@@ -122,12 +130,19 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span className={style[sideSectionState]}>Docs</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.docs}</span>
                         </button>
                     </li>
 
                     <li className={style['nav-btn']}>
-                        <button className={style['main-wrapper']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name={BTN_NAMES.goals}
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === BTN_NAMES.goals ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg
                                     width={18}
@@ -142,7 +157,7 @@ export default function NavPanel() {
                                     />
                                 </svg>
                             </div>
-                            <span className={style[sideSectionState]}>Goals</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.goals}</span>
                         </button>
                     </li>
                 </ul>
@@ -154,7 +169,14 @@ export default function NavPanel() {
 
                 <ul role='list' className={style['main-btns']}>
                     <li className={style['nav-btn']}>
-                        <button className={style['main-wrapper']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name={BTN_NAMES.teamView}
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === BTN_NAMES.teamView ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg
                                     width={18}
@@ -172,12 +194,19 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span className={style[sideSectionState]}>Team View</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.teamView}</span>
                         </button>
                     </li>
 
                     <li className={style['nav-btn']}>
-                        <button className={style['main-wrapper']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name={BTN_NAMES.history}
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === BTN_NAMES.history ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg
                                     width={16}
@@ -193,12 +222,19 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span className={style[sideSectionState]}>History</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.history}</span>
                         </button>
                     </li>
 
                     <li className={style['nav-btn']}>
-                        <button className={style['main-wrapper']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name={BTN_NAMES.files}
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === BTN_NAMES.files ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg
                                     width={20}
@@ -213,7 +249,7 @@ export default function NavPanel() {
                                     />
                                 </svg>
                             </div>
-                            <span className={style[sideSectionState]}>Files</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.files}</span>
                         </button>
                     </li>
                 </ul>
@@ -226,7 +262,14 @@ export default function NavPanel() {
 
                 <ul role='list' className={style['main-btns']}>
                     <li className={style['nav-btn']}>
-                        <button className={style['main-wrapper']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name={BTN_NAMES.marketing}
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === BTN_NAMES.marketing ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg
                                     width={22}
@@ -239,12 +282,19 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span className={style[sideSectionState]}>Marketing</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.marketing}</span>
                         </button>
                     </li>
 
                     <li className={style['nav-btn']}>
-                        <button className={style['main-wrapper']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name={BTN_NAMES.product}
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === BTN_NAMES.product ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg
                                     width={22}
@@ -258,12 +308,19 @@ export default function NavPanel() {
 
 
                             </div>
-                            <span className={style[sideSectionState]}>Product</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.product}</span>
                         </button>
                     </li>
 
                     <li className={style['nav-btn']}>
-                        <button className={style['main-wrapper']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name={BTN_NAMES.engineering}
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === BTN_NAMES.engineering ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg
                                     width={22}
@@ -276,12 +333,19 @@ export default function NavPanel() {
                                 </svg>
 
                             </div>
-                            <span className={style[sideSectionState]}>Engineering</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.engineering}</span>
                         </button>
                     </li>
 
                     <li className={style['nav-btn']}>
-                        <button className={style['main-wrapper']}>
+                        <button
+                            onClick={activeSetterHandler}
+                            name={BTN_NAMES.finance}
+                            className={
+                                `${style['main-wrapper']} 
+                                ${style[activeBtn === BTN_NAMES.finance ? 'active-nav-btn' : ""]}`
+                            }
+                        >
                             <div className={style['svg-wrapper']}>
                                 <svg
                                     width={22}
@@ -295,7 +359,7 @@ export default function NavPanel() {
 
 
                             </div>
-                            <span className={style[sideSectionState]}>Finance</span>
+                            <span className={style[sideSectionState]}>{BTN_NAMES.finance}</span>
                         </button>
                     </li>
                 </ul>

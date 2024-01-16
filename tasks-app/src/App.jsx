@@ -5,7 +5,7 @@ import Main from "./components/main/Main"
 
 function App() {
 
-  const [websiteMode, setWebsiteMode] = useState('light-mode');
+  const [websiteMode, setWebsiteMode] = useState('dark-mode');
 
   const lightModeSetter = () => {
     setWebsiteMode('light-mode')

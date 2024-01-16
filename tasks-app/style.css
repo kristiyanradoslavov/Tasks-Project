@@ -14,26 +14,26 @@ body {
     width: 100%;
 }
 
-.light-mode {
+/* .light-mode {
     background-color: var(--light-mode);
     color: var(--light-font-color);
 }
+
+.light-mode button {
+    color: var(--light-font-color);
+} 
+
+.light-mode path {
+    fill: var(--light-font-color);
+} */
 
 .dark-mode {
     background-color: var(--dark-mode);
     color: var(--dark-font-color);
 }
 
-.light-mode button {
-    color: var(--light-font-color);
-}
-
 .dark-mode button {
     color: var(--dark-font-color);
-}
-
-.light-mode path {
-    fill: var(--light-font-color);
 }
 
 button {

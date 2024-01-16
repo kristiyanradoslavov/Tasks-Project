@@ -143,19 +143,10 @@
     margin-bottom: 20px;
 }
 
-.resources {
-    border-bottom: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    /* width: 100%; */
-}
-
 .spaces {
     border-right: 1px solid var(--border-color);
-}
-
-.resources,
-.spaces {
     padding: 20px 0px;
+
 }
 
 .closed {

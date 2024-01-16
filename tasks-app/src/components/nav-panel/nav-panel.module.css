@@ -143,12 +143,6 @@
     margin-bottom: 20px;
 }
 
-.spaces {
-    border-right: 1px solid var(--border-color);
-    padding: 20px 0px;
-
-}
-
 .closed {
     display: none;
 }

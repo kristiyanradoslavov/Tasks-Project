@@ -57,13 +57,11 @@
     margin-bottom: 20px;
 }
 
-.resources {
-    border-bottom: 1px solid var(--border-color);
+.spaces {
     border-right: 1px solid var(--border-color);
     padding: 20px 0px;
-    /* width: 100%; */
-}
 
+}
 
 /* CLOSED NAV CSS START */
 .closed-nav {

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import useNavPanelState from '../../hooks/useNavPanelState';
-
 import style from './nav-panel.module.css'
 
 import MainNavPanel from './main-nav-panel/MainNavPanel';

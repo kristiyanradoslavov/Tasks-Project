@@ -1,5 +1,9 @@
 import { useState } from 'react';
+
+import useNavPanelState from '../../hooks/useNavPanelState';
+
 import style from './nav-panel.module.css'
+
 import MainNavPanel from './main-nav-panel/MainNavPanel';
 import ResourcesNavPanel from './resources-nav-panel/ResourcesNavPanel';
 import SpacesNavPanel from './spaces-nav-panel/SpacesNavPanel';
@@ -20,8 +24,9 @@ const BTN_NAMES = {
 
 export default function NavPanel() {
 
-    const [sideSectionState, setSideSectionState] = useState('');
     const [activeBtn, setActiveBtn] = useState('');
+
+    const { sideSectionState, openSideSection, closeSideSection } = useNavPanelState();
 
     const activeSetterHandler = (e) => {
         const currentBtn = e.currentTarget.name;
@@ -34,14 +39,6 @@ export default function NavPanel() {
         } else {
             closeSideSection();
         }
-    }
-
-    const closeSideSection = () => {
-        setSideSectionState('closed');
-    }
-
-    const openSideSection = () => {
-        setSideSectionState('');
     }
 
     return (

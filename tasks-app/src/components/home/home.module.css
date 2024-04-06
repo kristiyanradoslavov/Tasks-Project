@@ -1,3 +1,19 @@
+:root {
+    --border-color: #232325;
+}
+
+.home-wrapper {
+    width: 100%;
+}
+
+.home-header {
+    height: 64px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+
+}
+
 .head-label {
     display: flex;
     align-items: center;

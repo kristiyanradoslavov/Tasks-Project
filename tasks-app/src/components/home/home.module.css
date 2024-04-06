@@ -1,6 +1,7 @@
 :root {
     --border-color: #232325;
     --new-task-btn-color: #37266C;
+    --btn-hover-color: #4a3657;
 }
 
 .home-wrapper {
@@ -41,12 +42,34 @@
     font-size: 22px;
 }
 
+
 .add-task-btn button {
     background-color:var(--new-task-btn-color);
-    /* width: 124px;
-    height: 40px; */
-    padding: 12px 31px;
+    width: 124px;
+    height: 40px;
+    padding: 8px 31px;
     font-size: 14px;
     border: none;
     border-radius: 6px;
+}
+
+.add-task-btn button:hover {
+    background-color: var(--btn-hover-color);
+}
+
+
+/* MAIN SECTION MAIN */
+
+.tasks-notes-stickies-wrapper {
+    display: flex;
+    gap: 26px;
+    margin: 28px;
+}
+
+.tasks-notes {
+    width: 50%;
+}
+
+.stickies {
+    width: 50%;
 }

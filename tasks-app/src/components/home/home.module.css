@@ -1,5 +1,6 @@
 :root {
     --border-color: #232325;
+    --new-task-btn-color: #37266C;
 }
 
 .home-wrapper {
@@ -25,4 +26,27 @@
 .text {
     width: 73px;
     font-size: 26px;
+}
+
+
+/* MAIN SECTION HEADER */
+
+.main-section-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 69px 28px;
+}
+
+.greeting-msg {
+    font-size: 22px;
+}
+
+.add-task-btn button {
+    background-color:var(--new-task-btn-color);
+    /* width: 124px;
+    height: 40px; */
+    padding: 12px 31px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
 }

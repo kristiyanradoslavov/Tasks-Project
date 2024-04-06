@@ -3,7 +3,7 @@ import styles from './home.module.css'
 export default function Home() {
     return (
 
-        <div className={styles["home-wrapper"]}>
+        <section className={styles["home-wrapper"]}>
             <header className={styles['home-header']}>
                 <div className={styles['head-label']}>
                     <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,7 +16,19 @@ export default function Home() {
                 </div>
             </header>
 
+            <main>
+                <div className={styles['main-section-header']}>
+                    <div className={styles['greeting-msg']}>
+                        <p>Good Evening, Someone</p>
+                    </div>
+                    
+                    <div className={styles['add-task-btn']}>
+                        <button>Add Task</button>
+                    </div>
+                </div>
+            </main>
 
-        </div>
+
+        </section>
     );
 }

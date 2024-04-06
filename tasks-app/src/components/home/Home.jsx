@@ -1,4 +1,5 @@
 import styles from './home.module.css'
+import TasksNotes from './tasks-notes/TasksNotes';
 
 export default function Home() {
     return (
@@ -28,11 +29,8 @@ export default function Home() {
                 </div>
 
                 <div className={styles['tasks-notes-stickies-wrapper']}>
-                    <section className={styles['tasks-notes']}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ullam commodi suscipit, labore vitae ex fugit earum adipisci a voluptatem aut iure consectetur sit quod. Beatae asperiores autem illum dolore!
-                        Eos quos quibusdam totam facilis! Voluptatem tenetur, veritatis reprehenderit quidem laborum obcaecati odit esse corrupti? Suscipit facilis ducimus dignissimos non laudantium ut expedita, enim doloremque pariatur fuga veritatis nobis dolorem?
-                        Unde dolorem dolores, tempore obcaecati quas expedita. Repellendus necessitatibus doloremque reprehenderit adipisci sequi pariatur voluptatibus, quibusdam omnis minus doloribus est suscipit similique, aspernatur maiores laudantium fugiat, aperiam exercitationem quisquam facere!
-                    </section>
+
+                    <TasksNotes />
 
                     <section className={styles['stickies']}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, repudiandae nobis eos delectus soluta corrupti? Quasi labore deleniti dolor alias, ab fuga accusamus, aliquid id recusandae vitae officiis magnam aliquam?

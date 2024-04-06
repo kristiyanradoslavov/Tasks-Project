@@ -1,0 +1,12 @@
+.head-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 107px;
+    margin-left: 50px;
+}
+
+.text {
+    width: 73px;
+    font-size: 26px;
+}

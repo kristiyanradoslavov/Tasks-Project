@@ -70,3 +70,21 @@ input:checked+.slider {
 input:checked+.slider:before {
     transform: translateX(1.5em);
 }
+
+
+/* SINGLE NOTE STYLE */
+
+.notes-list {
+    padding: 38px;
+}
+
+.single-note {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.note-preview-wrapper {
+    display: flex;
+    gap: 20px;
+}

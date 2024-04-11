@@ -5,12 +5,15 @@ export default function TasksNotes() {
     return (
         <>
             <section className={styles['tasks-notes']}>
-                <div className={styles['switch-section']}> 
+                <div className={styles['switch-section']}>
                     <p>Recent Notes</p>
 
                     <div className={styles['switch-button']}>
                         <span>Switch to Tasks</span>
-                        <button>Switch</button>
+                        <label className={styles['switch']}>
+                            <input type="checkbox" />
+                            <span className={styles['slider']}></span>
+                        </label>
                     </div>
                 </div>
             </section>

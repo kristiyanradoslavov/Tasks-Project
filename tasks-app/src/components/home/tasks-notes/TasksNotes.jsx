@@ -30,7 +30,7 @@ export default function TasksNotes() {
                             </span>
 
                             <span className={styles['note-preview']}>
-                                This is the actual note preview, This is the actual note preview
+                                This is the actual note preview
                             </span>
                         </div>
 

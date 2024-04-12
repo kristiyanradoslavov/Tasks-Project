@@ -75,16 +75,26 @@ input:checked+.slider:before {
 /* SINGLE NOTE STYLE */
 
 .notes-list {
-    padding: 38px;
+    padding: 0px 38px;
+    font-size: 12px;
+    border-bottom: 1px solid black;
 }
 
 .single-note {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 2px;
 }
 
 .note-preview-wrapper {
     display: flex;
     gap: 20px;
+}
+
+.note-space {
+    display: flex;
+    gap: 10px ;
+    justify-content: center;
+    align-items: center;
 }
